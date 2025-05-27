@@ -3,15 +3,22 @@ entries:
   zoo:
   - apiVersion: v2
     appVersion: 0.0.0
-    created: "2025-05-27T08:36:24.689115304Z"
+    created: "2025-05-27T08:51:56.922295657Z"
     dependencies:
+    - name: zoo-frontend
+      repository: file://charts/zoo-frontend
+      version: 0.0.0
     - name: zoo-backend
       repository: file://charts/zoo-backend
       version: 0.0.0
+    - condition: mongo.internal.enabled
+      name: zoo-mongo
+      repository: file://charts/zoo-mongo
+      version: 0.0.0
     description: Umbrella chart to deploy frontend, backend and mongo
-    digest: 46904d312d27446cde964383ff42560360bbcbcae7464d081a8c01ab46154335
+    digest: f9a47264451b3b95a8a7dd4e6e7fece72ed10db4bbf6cde4bfc9476134f09e82
     name: zoo
     urls:
     - https://raw.githubusercontent.com/vieites-tfg/helm-repository/gh-pages/helm/zoo-0.0.0.tgz
     version: 0.0.0
-generated: "2025-05-27T08:36:24.688346551Z"
+generated: "2025-05-27T08:51:56.921534898Z"
