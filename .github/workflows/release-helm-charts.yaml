@@ -52,6 +52,8 @@ jobs:
           git add .
           git commit -m "Updated from ref: $GITHUB_SHA"
           git push https://${{ secrets.USERNAME }}:${{ secrets.PAT }}@github.com/vieites-tfg/helm-repository.git
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Push New Files
         shell: bash
@@ -63,3 +65,5 @@ jobs:
           git add index.yaml
           git commit -m "Updated from ref: $GITHUB_SHA"
           git push https://${{ secrets.USERNAME }}:${{ secrets.PAT }}@github.com/vieites-tfg/helm-repository.git
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
