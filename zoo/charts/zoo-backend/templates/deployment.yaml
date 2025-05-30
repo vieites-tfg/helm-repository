@@ -25,9 +25,9 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           envFrom:
             - configMapRef:
-                name: {{ .Chart.Name }}-{{ .Release.Namespace }}-config
+                name: {{ .Release.Name }}-{{ .Chart.Name }}-config
             - secretRef:
-                name: {{ .Chart.Name }}-{{ .Release.Namespace }}-secret
+                name: {{ .Release.Name }}-{{ .Chart.Name }}-secret
           ports:
             - containerPort: {{ .Values.service.port }}
           resources:

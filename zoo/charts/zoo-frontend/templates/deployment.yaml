@@ -22,7 +22,7 @@ spec:
       volumes:
         - name: frontend-config-volume
           configMap:
-            name: {{ .Chart.Name }}-{{ .Release.Namespace }}-config-js
+            name: {{ .Release.Name }}-{{ .Chart.Name }}-config-js
             items:
               - key: config.js
                 path: config.js
@@ -34,7 +34,7 @@ spec:
           imagePullPolicy: {{ .Values.global.image.pullPolicy }}
           envFrom:
             - configMapRef:
-                name: {{ .Chart.Name }}-{{ .Release.Namespace }}-config
+                name: {{ .Release.Name }}-{{ .Chart.Name }}-config
           ports:
             - containerPort: 80
           resources:
