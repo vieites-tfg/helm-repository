@@ -10,7 +10,8 @@ dependencies:
   - name: zoo-backend
     version: 0.0.0
     repository: file://charts/zoo-backend
-  - name: zoo-mongo
-    version: 0.0.0
-    repository: file://charts/zoo-mongo
+  - name: mongodb
+    repository: https://charts.bitnami.com/bitnami
+    version: 15.0.0
     condition: mongo.internal.enabled
+    alias: zoo-mongo
