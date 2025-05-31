@@ -16,15 +16,20 @@ global:
     port: 8080
 
 zoo-mongo:
-  image:
-    repository: mongo
-  architecture: replicaset
+  architecture: standalone
   replicaCount: 1
+  arbiter:
+    enabled:
+      false
   auth:
     enabled: true
     rootPassword: ""
     rootUser: ""
     databases: [ "zoo" ]
+    usernames: [ "user" ]
+    passwords: [ "hola" ]
+  volumePermissions:
+    enabled: true
   persistence:
     enabled: true
     storageClass: standard
