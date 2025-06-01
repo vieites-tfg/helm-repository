@@ -8,7 +8,7 @@ ingress:
   hostTemplate: "api-zoo-{{ .Release.Namespace }}.example.com"
 mongo:
   service:
-    name: "zoo-mongo-{{ .Release.Namespace }}-svc"
+    name: "zoo-dev-zoo-mongo"
     port: 27017
   root:
     user: ""     # From cmd line

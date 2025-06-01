@@ -14,20 +14,26 @@ global:
     password: ""
   ingress:
     port: 8080
+  security:
+    allowInsecureImages: true
 
 zoo-mongo:
+  image:
+    repository: xavidop/mongodb
+    tag: '7.0'
   architecture: standalone
   replicaCount: 1
   arbiter:
-    enabled:
-      false
+    enabled: false
+  metrics:
+    enabled: false
   auth:
     enabled: true
     rootPassword: ""
     rootUser: ""
     databases: [ "zoo" ]
     usernames: [ "user" ]
-    passwords: [ "hola" ]
+    passwords: []
   volumePermissions:
     enabled: true
   persistence:
