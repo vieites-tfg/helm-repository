@@ -43,6 +43,7 @@ mongodb:
       - ReadWriteOnce
     size: 5Gi
   service:
+    overrideName: "{{ .Release.Name }}-zoo-mongo-svc"
     type: ClusterIP
     ports:
       mongodb: 27017
