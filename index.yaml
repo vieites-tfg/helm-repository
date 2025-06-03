@@ -3,6 +3,26 @@ entries:
   zoo:
   - apiVersion: v2
     appVersion: 0.0.0
+    created: "2025-06-03T10:42:01.441073262Z"
+    dependencies:
+    - name: zoo-frontend
+      repository: file://charts/zoo-frontend
+      version: 0.0.0
+    - name: zoo-backend
+      repository: file://charts/zoo-backend
+      version: 0.0.0
+    - condition: mongo.internal.enabled
+      name: mongodb
+      repository: https://charts.bitnami.com/bitnami
+      version: 15.0.0
+    description: Umbrella chart to deploy frontend, backend and mongo
+    digest: 9ecb0838f357897054ae6c09f120595d021c332290bd62558d8928e8f2e0194c
+    name: zoo
+    urls:
+    - https://raw.githubusercontent.com/vieites-tfg/helm-repository/gh-pages/helm/zoo-0.0.3.tgz
+    version: 0.0.3
+  - apiVersion: v2
+    appVersion: 0.0.0
     created: "2025-06-03T10:22:33.502257754Z"
     dependencies:
     - name: zoo-frontend
@@ -61,4 +81,4 @@ entries:
     urls:
     - https://raw.githubusercontent.com/vieites-tfg/helm-repository/gh-pages/helm/zoo-0.0.0.tgz
     version: 0.0.0
-generated: "2025-06-03T10:22:33.49581627Z"
+generated: "2025-06-03T10:42:01.434330152Z"
