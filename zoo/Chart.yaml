@@ -14,4 +14,3 @@ dependencies:
     repository: https://charts.bitnami.com/bitnami
     version: 15.0.0
     condition: mongo.internal.enabled
-    alias: zoo-mongo

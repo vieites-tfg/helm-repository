@@ -17,7 +17,7 @@ global:
   security:
     allowInsecureImages: true
 
-zoo-mongo:
+mongodb:
   image:
     repository: xavidop/mongodb
     tag: '7.0'
