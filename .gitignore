@@ -1,0 +1,4 @@
+.env
+
+zoo/charts/*tgz
+Chart.lock
