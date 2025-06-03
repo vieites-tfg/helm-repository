@@ -1,7 +1,7 @@
 apiVersion: v2
 name: zoo
 description: Umbrella chart to deploy frontend, backend and mongo
-version: 0.0.1
+version: 0.0.2
 appVersion: "0.0.0"
 dependencies:
   - name: zoo-frontend
